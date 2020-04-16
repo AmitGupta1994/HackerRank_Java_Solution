@@ -13,6 +13,7 @@ public class Solution {
 
     public static String getSmallestAndLargest(String s, int k) {
     	String smallest = "";
+        String largest = "";
         
         int numberOfSubStr = s.length() - (k-1) ;
 
@@ -29,6 +30,14 @@ public class Solution {
             
         }
 
-        return smallest;
+        largest = subStrArray[0];
+        for (int i=1;i<subStrArray.length;i++){
+            if(largest.compareTo(subStrArray[i])<0){
+                largest = subStrArray[i];
+            }
+            
+        }
+
+        return smallest + "\n" + largest;
     }
 }
