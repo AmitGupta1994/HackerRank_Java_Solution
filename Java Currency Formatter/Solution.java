@@ -11,7 +11,6 @@ public class Solution {
         double payment = scanner.nextDouble();
         scanner.close();
 
-        // Write your code here.
         NumberFormat nfUS = NumberFormat.getCurrencyInstance(Locale.US);
         String us = nfUS.format(payment);
         
